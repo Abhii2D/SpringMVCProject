@@ -22,13 +22,9 @@ public class myConrtoller {
 	@Autowired
 	private ProductDao productDao;
 
+	
+
 	@RequestMapping("/")
-	public String home() {
-
-		return "index";
-	}
-
-	@RequestMapping("/add")
 	public String CreateMapping(Model model) {
 		model.addAttribute("title", "Create Product");
 		return "addPage";
@@ -64,6 +60,7 @@ public class myConrtoller {
 	@RequestMapping("/UpdateProduct/{productId}")
 	public String Updateproduct(@PathVariable("productId") int pid, Model model) {
 		Product product = productDao.getProduct(pid);
+		model.addAttribute("title", "Update Form");
 		model.addAttribute("productupdate", product);
 		return "UpdateForm";
 	}
