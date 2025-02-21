@@ -20,7 +20,7 @@ public class ProductDao {
 // Create 	
 	@Transactional
 	public void CreateProduct(Product product) {
-		this.hibernateTemplate.save(product);
+		this.hibernateTemplate.saveOrUpdate(product);
 	}
 
 // Fetch

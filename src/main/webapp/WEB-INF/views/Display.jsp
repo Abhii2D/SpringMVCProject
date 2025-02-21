@@ -49,7 +49,7 @@
         <div class="card-header">Welcome to Product App</div>
         <div class="card-body">
          
-    <a href="" class="btn btn-outline-success m-2">Add Product</a>
+    <a href="${pageContext.request.contextPath}/add" class="btn btn-outline-success m-2">Add Product</a>
     
             <table class="table">
                 <tr>
@@ -66,7 +66,15 @@
                     <td>${p.name}</td>
                     <td>${p.price}</td>
                     <td>${p.description}</td>
-                   <td></td>
+                  <td style="white-space: nowrap; text-align: center; vertical-align: middle; padding: 5px;">
+    <a href="DeleteProduct/${p.id}" style="margin-right: 15px;">
+        <i class="fa-solid fa-trash fa-lg" style="color: #B197FC;"></i>
+    </a>
+    <a href="UpdateProduct/${p.id}">
+        <i class="fa-solid fa-pen-nib fa-lg" style="color: black;"></i>
+    </a>
+</td>
+
                 </tr>
                 </c:forEach>
             </table>
