@@ -49,7 +49,7 @@
         <div class="card-header">Welcome to Product App</div>
         <div class="card-body">
          
-    <a href="${pageContext.request.contextPath}/add" class="btn btn-outline-success m-2">Add Product</a>
+    <a href="${pageContext.request.contextPath}/" class="btn btn-outline-success m-2">Add Product</a>
     
             <table class="table">
                 <tr>
